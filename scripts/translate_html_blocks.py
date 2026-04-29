@@ -117,6 +117,8 @@ body {
 }
 .ltx_table {
   display: flow-root !important;
+  width: 100% !important;
+  text-align: center !important;
   page-break-inside: avoid;
   break-inside: avoid;
 }
@@ -124,10 +126,42 @@ body {
   display: block !important;
   width: 100% !important;
   height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
   vertical-align: baseline !important;
 }
 .ltx_table .ltx_transformed_inner {
   display: block !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transform: none !important;
+}
+.ltx_figure:has(.ltx_transformed_outer table),
+.ltx_figure_panel:has(.ltx_transformed_outer table),
+.ltx_minipage:has(.ltx_transformed_outer table) {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+.ltx_transformed_outer:has(table) {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  vertical-align: baseline !important;
+}
+.ltx_transformed_outer:has(table) > .ltx_transformed_inner {
+  display: block !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   transform: none !important;
 }
 .ltx_figure img, .ltx_graphics {
@@ -135,6 +169,37 @@ body {
   max-width: 100% !important;
   height: auto !important;
   margin: 0 auto;
+}
+.ltx_picture {
+  display: block !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 24px auto !important;
+  overflow: hidden !important;
+}
+svg.ltx_picture {
+  font-family: Arial, sans-serif !important;
+  font-size: 6px !important;
+  line-height: 1.08 !important;
+}
+svg.ltx_picture .ltx_p {
+  display: block;
+  margin: 0 0 2px !important;
+  text-align: left !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+svg.ltx_picture .ltx_text,
+svg.ltx_picture .ltx_inline-block {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+svg.ltx_picture .ltx_inline-block {
+  max-width: 100%;
 }
 .ltx_caption {
   margin: 12px auto 0 !important;
@@ -146,8 +211,7 @@ body {
 }
 table, .ltx_tabular {
   border-collapse: collapse !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin: 0 auto !important;
   width: 100% !important;
   max-width: 100% !important;
   table-layout: fixed !important;

@@ -1,0 +1,13 @@
+.env
+.venv/
+outputs/cache/
+inputs/
+outputs/
+assets/
+__pycache__/
+*.pyc
+.DS_Store
+.playwright-mcp/
+*.png
+!docs/
+!docs/*.png
